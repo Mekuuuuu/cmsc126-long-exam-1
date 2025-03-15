@@ -67,6 +67,7 @@ header {
     width: 800px;
     /* Smoothens the edges */
     border-radius: 15px 15px 0 0;
+    /*Removes extra padding so it's exactly 800px */
     box-sizing: border-box;
     
 }
