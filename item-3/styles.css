@@ -2,15 +2,19 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    background-color: #ff5e00;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
 }
 
 header {
-    padding: 10px;
-    background-color: #ff5e00;
-    color: white;
-    border-radius: 10px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1000px; /* Prevent it from being too wide */
+    margin: 20px auto; /* Centers the header */
+    padding: 10px; /* Adjust padding */
+    background-color: #FF621F; /* Keeps the orange color */
+    color: rgb(0, 0, 0);
+    border-radius: 15px; /* Softens the edges */
 }
 
 h1 {
@@ -56,19 +60,23 @@ nav a {
     border-radius: 5px;
 }
 
+/* Accessibility */
 nav a:hover,
 nav a:focus {
-    background: #555;
+    outline: 2px solid #FF621F; /* Highlight focus */
+    background-color: rgb(17, 17, 16);
+    border-radius: 4px;
 }
 
 /* Steps Styling */
 .step {
     display: none;
-    padding: 20px;
+    padding: 10px;
     margin: 20px auto;
-    width: 60%;
+    width: 80%; /* Matches the header width */
+    max-width: 1000px; /* Prevents it from being too wide */
     background: white;
-    border-radius: 10px;
+    border-radius: 15px; /* Matches header's border-radius */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-height: 500px;
     position: relative;
@@ -78,16 +86,20 @@ nav a:focus {
     display: block;
 }
 
-/* Accessibility */
-nav a:focus {
-    outline: 2px solid #ff5e00;
+
+/* Override aria-hidden when step is active */
+.step:target[aria-hidden] {
+    aria-hidden: false;
 }
 
-
-/*I do not understand how this works, sir. And I don't this I used this at all or I don't know sajdvbasj.*/
 .step:not(:target) {
     aria-hidden: true;
 }
+
+[aria-hidden="true"]{
+    display: none;
+}
+
 
 /* Buttons */
 .next,
@@ -144,7 +156,7 @@ nav a:focus {
 }
 
 .confetti:nth-child(3n) {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
 }
 
 /* Confetti Speed & Positions */
@@ -168,7 +180,7 @@ nav a:focus {
     left: 40%;
 }
 
-confetti:nth-child(5) {
+.confetti:nth-child(5) {
     animation-duration: 2.7s;
     left: 50%;
 }

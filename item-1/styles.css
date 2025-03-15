@@ -1,3 +1,6 @@
+/*I edited the newsfeed.html sir but only the Latest News and Trending Topics texts. I made them all caps
+instead of the normal case. */
+
 /* Import Google Font for styling */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -37,34 +40,40 @@ body {
     /* White background for contrast */
     padding: 20px;
     /* Adds spacing inside the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(7, 4, 32, 0.1);
     /* Adds a soft shadow for depth */
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     /* Rounds the corners */
     gap: 20px;
     /* Adds space between elements */
-    max-width: 900px;
+    max-width: 800px;
     /* Limits the container width */
     width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Header Section */
 header {
-    background-color: #05122bfc;
     /* Dark blue background */
-    color: white;
+    background-color: #051229fc;
     /* White text for readability */
-    padding: 20px 0;
+    color: white;
     /* Adds vertical spacing */
-    text-align: center;
+    padding: 20px;
     /* Centers the text */
-    width: 940px;
+    text-align: center;
     /* Fixed width for layout consistency */
+    width: 800px;
+    /* Smoothens the edges */
+    border-radius: 15px 15px 0 0;
+    box-sizing: border-box;
+    
 }
 
 /* Header Title */
 header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     /* Large title font size */
     margin: 0;
 }
@@ -84,7 +93,7 @@ header h1 {
 .sidebar {
     width: 250px;
     /* Fixed sidebar width */
-    background-color: #05122bfc;
+    background-color: rgb(5, 18, 43);
     /* Matches the header background */
     color: #ffffff;
     /* White text for readability */

@@ -21,19 +21,17 @@
     </header>
 
     <nav>
-        <a href="#step1">Start Cooking</a>
+        <a href="#step1" tabindex="0">Start Cooking</a>
     </nav>
 
-    <main>
-        <section id="step1" class="step">
+    <main aria-live="polite">
+        <section id="step1" class="step" aria-hidden="false">
             <h2>Step 1: Gather Ingredients</h2>
             <img src="step1.png" alt="Ingredients for egg fried rice">
             <p>You will need day-old cooked rice, eggs, soy sauce, garlic, green onions, and cooking oil.</p>
-            <strong>
-                <p><i>DO NOT USE OLIVE OIL!</i></p>
-            </strong>
+            <p><strong><i>DO NOT USE OLIVE OIL!</i></strong></p>
             <nav>
-                <a href="#step2" class="next">Next</a>
+                <a href="#step2" class="next" tabindex="0" aria-label="Go to Step 2">Next</a>
             </nav>
         </section>
 
@@ -43,45 +41,44 @@
             <p>Heat oil in a pan, crack the eggs, and scramble them until cooked, then set aside.</p>
             <p class="note">NOTE: The egg should still be a bit moist.</p>
             <nav>
-                <a href="#step1" class="prev">Previous</a>
-                <a href="#step3" class="next">Next</a>
+                <a href="#step1" class="prev" tabindex="0" aria-label="Go to Step 1">Previous</a>
+                <a href="#step3" class="next" tabindex="0" aria-label="Go to Step 3">Next</a>
             </nav>
         </section>
 
-        <section id="step3" class="step">
+        <section id="step3" class="step" aria-hidden="true">
             <h2>Step 3: Sauté Garlic & Rice</h2>
             <img src="step3.png" alt="Mixing rice and scrambled eggs">
-            <p>Add garlic to the pan, then mix in the cooked rice and scrambled egg, then stir-fry for a couple of
-                minutes.</p>
+            <p>Add garlic to the pan, mix in the cooked rice and scrambled egg, then stir-fry for a couple of minutes.</p>
             <p class="note">Optional: Use fire and a wok to have wok hei. It makes it more flavorful.</p>
             <nav>
-                <a href="#step2" class="prev">Previous</a>
-                <a href="#step4" class="next">Next</a>
+                <a href="#step2" class="prev" tabindex="0" aria-label="Go to Step 2">Previous</a>
+                <a href="#step4" class="next" tabindex="0" aria-label="Go to Step 4">Next</a>
             </nav>
         </section>
 
-        <section id="step4" class="step">
+        <section id="step4" class="step" aria-hidden="true">
             <h2>Step 4: Season & Toss</h2>
             <img src="step4.jpg" alt="Seasoning egg fried rice">
             <p>Add the soy sauce, MSG, and salt to taste in the pan, then toss and mix well.</p>
             <p class="note">Optional: You can add vegetables. (But vegetables taste like sad anyway T ^ T)</p>
             <nav>
-                <a href="#step3" class="prev">Previous</a>
-                <a href="#step5" class="next">Next</a>
+                <a href="#step3" class="prev" tabindex="0" aria-label="Go to Step 3">Previous</a>
+                <a href="#step5" class="next" tabindex="0" aria-label="Go to Step 5">Next</a>
             </nav>
         </section>
 
-        <section id="step5" class="step">
+        <section id="step5" class="step" aria-hidden="true">
             <h2>Step 5: Plate and Serve!</h2>
             <img src="step5.jpg" alt="Plating egg fried rice">
             <p>Place the egg fried rice in a bowl, garnish it with spring onions, then serve!</p>
             <nav>
-                <a href="#step4" class="prev">Previous</a>
-                <a href="#step6" class="next">Next</a>
+                <a href="#step4" class="prev" tabindex="0" aria-label="Go to Step 4">Previous</a>
+                <a href="#step6" class="next" tabindex="0" aria-label="Go to Step 6">Next</a>
             </nav>
         </section>
 
-        <section id="step6" class="step">
+        <section id="step6" class="step" aria-hidden="true">
             <div class="confetti-container">
                 <div class="confetti"></div>
                 <div class="confetti"></div>
@@ -95,13 +92,45 @@
             </div>
             <h1>CONGRATULATIONS!</h1>
             <img src="uncleroger.gif" alt="Uncle Roger celebrating with niece and nephew">
-            <p>You have created a simple fried rice!</p>
+            <p>You have made a simple egg fried rice!</p>
             <nav>
-                <a href="#step5" class="prev">Previous</a>
-                <a href="#step1" class="restart">Restart</a>
+                <a href="#step5" class="prev" tabindex="0" aria-label="Go to Step 5">Previous</a>
+                <a href="#step1" class="restart" tabindex="0" aria-label="Restart to Step 1">Restart</a>
             </nav>
         </section>
     </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const steps = document.querySelectorAll(".step");
+            const firstStep = steps[0]; // Default to first step
+
+            function updateAriaHidden() {
+                const activeHash = window.location.hash.substring(1);
+                let activeStepFound = false;
+
+                steps.forEach(step => {
+                    if (step.id === activeHash) {
+                        step.setAttribute("aria-hidden", "false");
+                        activeStepFound = true;
+                    } else {
+                        step.setAttribute("aria-hidden", "true");
+                    }
+                });
+
+                // If no hash or invalid hash, show the first step
+                if (!activeStepFound && firstStep) {
+                    firstStep.setAttribute("aria-hidden", "false");
+                }
+            }
+
+            // Initial check on page load
+            updateAriaHidden();
+
+            // Update aria-hidden when URL hash changes
+            window.addEventListener("hashchange", updateAriaHidden);
+        });
+    </script>
 
 </body>
 
