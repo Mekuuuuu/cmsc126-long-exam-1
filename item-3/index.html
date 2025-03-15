@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cooking Guide: Egg Fried Rice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GUIDE TO MAKING EGG FRIED RICE</h1>
+        <p>A quick and easy step-by-step guide to making delicious egg fried rice.</p>
+        <div class="quote">
+            <p><i>"ONLY THREE INGREDIENTS. EGG. FRIED. RICE."</i></p>
+            <p><i>- Uncle Roger</i></p>
+        </div>
+        <img src="eggfriedrice.jpg" alt="A plate of egg fried rice" class="intro-image">
+    </header>
+
+    <nav>
+        <a href="#step1">Start Cooking</a>
+    </nav>
+
+    <main>
+        <section id="step1" class="step">
+            <h2>Step 1: Gather Ingredients</h2>
+            <img src="step1.png" alt="Ingredients for egg fried rice">
+            <p>You will need day-old cooked rice, eggs, soy sauce, garlic, green onions, and cooking oil.</p>
+            <strong>
+                <p><i>DO NOT USE OLIVE OIL!</i></p>
+            </strong>
+            <nav>
+                <a href="#step2" class="next">Next</a>
+            </nav>
+        </section>
+
+        <section id="step2" class="step" aria-hidden="true">
+            <h2>Step 2: Scramble the Eggs</h2>
+            <img src="step2.jpg" alt="Cooking scrambled eggs">
+            <p>Heat oil in a pan, crack the eggs, and scramble them until cooked, then set aside.</p>
+            <p class="note">NOTE: The egg should still be a bit moist.</p>
+            <nav>
+                <a href="#step1" class="prev">Previous</a>
+                <a href="#step3" class="next">Next</a>
+            </nav>
+        </section>
+
+        <section id="step3" class="step">
+            <h2>Step 3: Sauté Garlic & Rice</h2>
+            <img src="step3.png" alt="Mixing rice and scrambled eggs">
+            <p>Add garlic to the pan, then mix in the cooked rice and scrambled egg, then stir-fry for a couple of
+                minutes.</p>
+            <p class="note">Optional: Use fire and a wok to have wok hei. It makes it more flavorful.</p>
+            <nav>
+                <a href="#step2" class="prev">Previous</a>
+                <a href="#step4" class="next">Next</a>
+            </nav>
+        </section>
+
+        <section id="step4" class="step">
+            <h2>Step 4: Season & Toss</h2>
+            <img src="step4.jpg" alt="Seasoning egg fried rice">
+            <p>Add the soy sauce, MSG, and salt to taste in the pan, then toss and mix well.</p>
+            <p class="note">Optional: You can add vegetables. (But vegetables taste like sad anyway T ^ T)</p>
+            <nav>
+                <a href="#step3" class="prev">Previous</a>
+                <a href="#step5" class="next">Next</a>
+            </nav>
+        </section>
+
+        <section id="step5" class="step">
+            <h2>Step 5: Plate and Serve!</h2>
+            <img src="step5.jpg" alt="Plating egg fried rice">
+            <p>Place the egg fried rice in a bowl, garnish it with spring onions, then serve!</p>
+            <nav>
+                <a href="#step4" class="prev">Previous</a>
+                <a href="#step6" class="next">Next</a>
+            </nav>
+        </section>
+
+        <section id="step6" class="step">
+            <div class="confetti-container">
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div>
+            </div>
+            <h1>CONGRATULATIONS!</h1>
+            <img src="uncleroger.gif" alt="Uncle Roger celebrating with niece and nephew">
+            <p>You have created a simple fried rice!</p>
+            <nav>
+                <a href="#step5" class="prev">Previous</a>
+                <a href="#step1" class="restart">Restart</a>
+            </nav>
+        </section>
+    </main>
+
+</body>
+
+</html>
