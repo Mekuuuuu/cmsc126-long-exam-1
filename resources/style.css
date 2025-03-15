@@ -1,0 +1,18 @@
+.newsfeed-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "articles sidebar";
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    /* ...existing code... */
+}
+
+.newsfeed-header {
+    grid-area: header;
+    /* ...existing code... */
+}
+
+.newsfeed-articles {
