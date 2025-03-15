@@ -8,15 +8,25 @@
 <body>
     <header>
         <div class="header">
-            <img src="reddit-icon.png" alt="">
+            <img src="reddit-icon.webp" alt="">
             <h1>reddit</h1>
     </header>
-    <nav> Navbar
-        <!-- <button>what’s hot</button>
-        <button>new</button>
-        <button>controversial</button>
-        <button>top</button>
-        <button>saved</button> -->
+    <nav>
+        <div class="nav-buttons">
+            <a href="#" class="active">what’s hot</a>
+            <a href="#">new</a>
+            <a href="#">controversial</a>
+            <a href="#">top</a>
+            <a href="#">saved</a>
+        </div>    
+        <div class="nav-right">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <div class="stats-buttons">
+                <a href="#"> <span class="message-icon">✉</span> 1 New Msg</a>
+                <a href="#">53,211 Links</a>
+                <a href="#">4,887 Comments</a>
+            </div>
+        </div>
     </nav>
     
     <aside>
@@ -28,12 +38,23 @@
             <li><a href="#"><span class="icon">🏠</span> <span class="text">ASK REDDIT</span></a></li>
             <li><a href="#"><span class="icon">🔍</span> <span class="text">FUNNY</span></a></li>
             <li><a href="#"><span class="icon">📩</span> <span class="text">WTF</span></a></li>
-            <li><a href="#"><span class="icon">⚙️</span> <span class="text">IAMA</span></a></li>
+            <!-- <li><a href="#"><span class="icon">⚙️</span> <span class="text">IAMA</span></a></li>
             <li><a href="#"><span class="icon">🏠</span> <span class="text">WORLD NEWS</span></a></li>
             <li><a href="#"><span class="icon">🔍</span> <span class="text">WEB DESIGN</span></a></li>
             <li><a href="#"><span class="icon">📩</span> <span class="text">ATHEIST</span></a></li>
-            <li><a href="#"><span class="icon">⚙️</span> <span class="text">FFFFUUUUUUUUUU</span></a></li>
+            <li><a href="#"><span class="icon">⚙️</span> <span class="text">FFFFUUUUUUUUUU</span></a></li> -->
         </ul>
+        <a href="#">(MORE)</a>
+        <div class="sidebar-box">
+            <a href="submit-link.com">Submit a link</a>
+            <p>to anything interesting: news article, blog entry, video, picture..</p>
+        </div>
+        <div class="sidebar-box">
+            <a href="create-community.com">Create Community</a>
+            <p>...for your LARPing community.</p>
+            <p>...because nothing in life is free (except reddits!)</p>
+            <p>here on the side</p>
+        </div>
     </aside>
     <main>
         <section class="post-list">
@@ -68,7 +89,7 @@
                 </li>
                 <li>
                     <article class="post">
-                        <div class="post-rank">1</div>
+                        <div class="post-rank">2</div>
                         <div class="post-container">
                             <div class="post-votes">
                                 <input type="checkbox" id="upvote2" class="vote-up">
@@ -93,7 +114,7 @@
                 </li>
                 <li>
                     <article class="post">
-                        <div class="post-rank">1</div>
+                        <div class="post-rank">3</div>
                         <div class="post-container">
                             <div class="post-votes">
                                 <input type="checkbox" id="upvote3" class="vote-up">
@@ -116,7 +137,40 @@
                         </div>
                     </article>
                 </li>
+                  <li>
+                    <article class="post">
+                        <div class="post-rank">4</div>
+                        <div class="post-container">
+                            <div class="post-votes">
+                                <input type="checkbox" id="upvote4" class="vote-up">
+                                <label for="upvote4" class="upvote">🡅</label>
+                                <span class="score">282</span>
+                                <input type="checkbox" id="downvote4" class="vote-down">
+                                <label for="downvote4" class="downvote">🡇</label>
+                            </div>
+                            <div class="post-content">
+                                <h2><a href="#">Pano gawin malapot ung munggo?</a><span class="post-source">(i.imgur.com)</span></h2>
+                                <p class="post-meta">submitted 22 hours ago by <a href="#">Pinkish_glow</a></p>
+                                <div class="post-comments">
+                                    <button>32 comments</button>
+                                    <button>share</button>
+                                    <button>save</button>
+                                    <button>hide</button>
+                                    <button>report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
             </ol>
+            <div class="list-changer-button">
+                <button class="change-button">
+                    ← NEWER
+                </button>
+                <button class="change-button">
+                    OLDER →
+                </button>
+            </div>
         </section>
         <section class="post-proper">
             <h1>Hello World</h1>
@@ -124,9 +178,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tincidunt nisi, ornare tincidunt mauris vestibulum at. Suspendisse a porta velit. Maecenas sed velit consequat, finibus risus suscipit, feugiat metus. Maecenas libero quam, aliquet a finibus vitae, molestie ac nulla. Nam porta elit enim, ultrices consequat nibh efficitur et. Phasellus augue sapien, lobortis in ligula eu, mollis tempus dui. Nulla eleifend tincidunt odio, sed eleifend massa accumsan vel. Pellentesque consectetur est id sem tincidunt, nec facilisis metus rhoncus. Fusce eget quam nec elit faucibus consectetur nec vel leo.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tincidunt nisi, ornare tincidunt mauris vestibulum at. Suspendisse a porta velit. Maecenas sed velit consequat, finibus risus suscipit, feugiat metus. Maecenas libero quam, aliquet a finibus vitae, molestie ac nulla. Nam porta elit enim, ultrices consequat nibh efficitur et. Phasellus augue sapien, lobortis in ligula eu, mollis tempus dui. Nulla eleifend tincidunt odio, sed eleifend massa accumsan vel. Pellentesque consectetur est id sem tincidunt, nec facilisis metus rhoncus. Fusce eget quam nec elit faucibus consectetur nec vel leo.</p>
         </section>
-        
-        
     </main>
-    <footer>Footer</footer>
 </body>
 </html>

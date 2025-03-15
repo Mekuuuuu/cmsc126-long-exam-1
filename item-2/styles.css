@@ -8,12 +8,11 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 150px 1fr;
-    grid-template-rows: auto auto 1fr auto ;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas: 
     "header header"
-    "navbar navbar"
+    "sidebar navbar"
     "sidebar main"
-    "sidebar footer";
 }
 
 header {
@@ -22,7 +21,10 @@ header {
     grid-area: header;
     background-color: #dcedff;
     color: black;
-    padding: 1em;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-top: 1px solid #000;
 }
 
 .header {
@@ -30,47 +32,127 @@ header {
     flex-direction: row;
     justify-content: start;
     align-content: end;
-    gap: 8px;
-
+    gap: 6px;
+   
 }
 
 .header img {
-    width: 28px;
-    height: 28px;
+    height: 24px;
+    width: auto;
+    align-self: flex-start;
 }
 
 .header h1 {
-    font-size: 20px;
+    font-size: 16px;
     align-self: flex-end;
 }
 
 nav {
-    top: 50.4px;;
+    top: 36.64px;;
     position: sticky;
     grid-area: navbar;
     background-color: #e9eaec;
     color: black;
-    padding: 1em
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-buttons {
+    display: flex;
+    /* background: #e6e6e6; */
+    /* padding-top: 5px; */
+    border-radius: 5px;
+    /* align-content: flex-end; */
+    gap: 5px;
+}
+
+nav .nav-buttons a {
+    text-decoration: none;
+    color: blue;
+    font-size: 8px;
+    padding: 5px 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 3px;
+    font-weight: bold;
+    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); */
+    
+}
+
+nav .nav-buttons a:hover {
+    background: #f8f8f8;
+}
+
+nav .nav-buttons .active {
+    background: white;
+    color: red;
+    font-weight: bold;
+}
+
+nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .search-bar {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    /* margin-right: 10px; */
+}
+
+nav .stats-buttons {
+    display: flex;
+    background: #e6e6e6;
+    border-radius: 5px;
+    align-content: flex-end;
+}
+
+nav .stats-buttons a {
+    text-decoration: none;
+    color: blue;
+    font-size: 8px;
+    padding: 5px 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 3px;
+}
+
+nav .stats-buttons .message-icon {
+    /* font-size: 10; */
+    color: orange;
+}
+
+nav .stats-buttons a:hover {
+    background: #f8f8f8;
 }
 
 aside {
-    height: calc(100vh - 100.8px);
-    top: 100.8px;
+    height: calc(100vh - 36.64px);
+    top: 36.64px;
     position: sticky;
     grid-area: sidebar;
     background-color: #eff8ff;
     color: black;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     /* transition: width 0.3s ease-in-out; */
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
 }
 
 aside ul li a {
-    padding: 6px 20px 6px 16px;
-    text-decoration: none;
-    font-size: 8px;
     color: #61615F;
-    display: block;
-    font-weight: bold;
 }
 
 aside ul li:hover a {
@@ -78,6 +160,28 @@ aside ul li:hover a {
     color: #fe5b1d;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+}
+
+aside a {
+    padding: 6px 20px 6px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+aside .sidebar-box  a {
+    padding-left: 6px;
+}
+
+aside .sidebar-box  p {
+    padding-left: 6px;
+}
+
+aside .sidebar-box {
+    background-color: #dcedff;
+    padding: 6px 20px 6px 16px;
+    margin-top: 10px;
+    width: 75%;
 }
 
 main {
@@ -88,6 +192,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "article-list article";
+
+    
 }
 
 /* POST LIST IN MAIN */
@@ -96,8 +202,13 @@ main .post-list {
     background: white;
     /* padding: 10px; */
     /* margin: 10px; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    border-right: 1px solid #000;
 }
 
 main .post-list ol {
@@ -109,7 +220,8 @@ main .post-list ol {
 main .post {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -137,18 +249,23 @@ main .post-votes {
     align-items: center;
     text-align: center;
     width: 40px;
-    /* font-size: 14px; */
+    font-size: 14px;
+}
+
+main .post-votes input {
+    display: none;
 }
 
 .upvote, .downvote {
     color: gray;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 14px;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .vote-up, .vote-down {
     display: none;
+    font-size: 10px;
 }
 
 .vote-up:checked + .upvote {
@@ -164,32 +281,35 @@ main .post-votes {
     color: darkgray;
 }
 
-main .post-thumbnail img {
+main .post-thumbnail {
     width: 70px;
     height: 70px;
     display: flex;
-    /* object-fit: cover; */
     align-items: center;
     justify-content: center;
+    padding-right: 3px;
 }
 
-main .upvote {
-    color: gray;
+main .post-thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.upvote, .downvote {
     cursor: pointer;
+    font-size: 24px;
+    transition: color 0.2s;
 }
 
-main .downvote {
-    color: gray;
-    cursor: pointer;
-}
 
-main .score {
+main .post-votes .score {
     font-weight: bold;
+    color: gray;
 }
 
 main .post-content {
     flex: 1;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -205,11 +325,12 @@ main .post-content .post-source {
 main .post h2 {
     font-size: 14px;
     margin: 0;
+    font-weight: normal;
 }
 
 main .post h2 a {
     text-decoration: none;
-    color: #0079d3;
+    color: #322ff9;
 }
 
 main .post h2 a:hover {
@@ -247,6 +368,38 @@ main .post-comments button:hover {
     text-decoration: underline;
 }
 
+main .list-changer-button {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+    padding-right: 10px;
+}
+
+main .change-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+main .change-button:hover {
+    background: linear-gradient(to bottom, #e0e0e0, #d0d0d0);
+}
+
+main .change-button img {
+    width: 12px;
+    height: 12px;
+}
+
 /* POST PROPER IN MAIN */
 main .post-proper {
     background: white;
@@ -255,12 +408,6 @@ main .post-proper {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    grid-area: footer;
-    background-color: #ffffff;
-    color: black;
-    padding: 2em;
-}
 
 @media(max-width: 800px) {
     body {
@@ -277,7 +424,7 @@ footer {
     }
 
     aside li {
-        justify-content: center;
+        justify-content: end;
     }
 
     .toggle-btn {
