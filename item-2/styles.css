@@ -69,12 +69,13 @@ nav .nav-buttons {
     border-radius: 5px;
     /* align-content: flex-end; */
     gap: 5px;
+    margin-left: 15px;
 }
 
 nav .nav-buttons a {
     text-decoration: none;
     color: blue;
-    font-size: 8px;
+    font-size: 10px;
     padding: 5px 10px;
     background: white;
     border: 1px solid #ccc;
@@ -82,6 +83,7 @@ nav .nav-buttons a {
     margin: 0 3px;
     font-weight: bold;
     /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); */
+    align-self: center;
     
 }
 
@@ -102,7 +104,7 @@ nav .nav-right {
 }
 
 nav .search-bar {
-    padding: 5px;
+    padding: 3px;
     border: 1px solid #ddd;
     border-radius: 3px;
     /* margin-right: 10px; */
@@ -118,7 +120,7 @@ nav .stats-buttons {
 nav .stats-buttons a {
     text-decoration: none;
     color: blue;
-    font-size: 8px;
+    font-size: 10px;
     padding: 5px 10px;
     background: white;
     border: 1px solid #ccc;
@@ -136,20 +138,22 @@ nav .stats-buttons a:hover {
 }
 
 aside {
-    height: calc(100vh - 36.64px);
-    top: 36.64px;
+    height: calc(100vh - 38.44px);
+    top: 36.44px;
     position: sticky;
     grid-area: sidebar;
     background-color: #eff8ff;
     color: black;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     /* transition: width 0.3s ease-in-out; */
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     display: flex;
     flex-direction: column;
-    font-size: 8px;
+    font-size: 9px;
+
 }
+
 
 aside ul li a {
     color: #61615F;
@@ -158,8 +162,7 @@ aside ul li a {
 aside ul li:hover a {
     background-color: #ffffff;
     color: #fe5b1d;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    outline: 1px solid #000;
 }
 
 aside a {
@@ -171,6 +174,8 @@ aside a {
 
 aside .sidebar-box  a {
     padding-left: 6px;
+    padding-bottom: 1px;
+    padding-top: 1px;
 }
 
 aside .sidebar-box  p {
@@ -181,7 +186,33 @@ aside .sidebar-box {
     background-color: #dcedff;
     padding: 6px 20px 6px 16px;
     margin-top: 10px;
-    width: 75%;
+    /* width: 75%; */
+    margin-right: 14px;
+    outline: 1px solid#d9e6f5;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+aside .sidebar-ad {
+    margin-top: 10px;
+    margin-right: 14px;
+    
+}
+
+aside .sidebar-image {
+    width: 135.2px;
+    height: auto;
+    border-radius: 1px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 4px;
+    
+}
+
+aside .sidebar-ad p {
+    direction: rtl;
+    font-style: italic;
+    font-weight: bold;
+    color: #61615F;
+
 }
 
 main {
@@ -200,10 +231,7 @@ main {
 
 main .post-list {
     background: white;
-    /* padding: 10px; */
-    /* margin: 10px; */
-    /* border-radius: 5px; */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -250,6 +278,7 @@ main .post-votes {
     text-align: center;
     width: 40px;
     font-size: 14px;
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
 main .post-votes input {
@@ -269,11 +298,11 @@ main .post-votes input {
 }
 
 .vote-up:checked + .upvote {
-    color: orange;
+    color: #fe9f7f;
 }
 
 .vote-down:checked + .downvote {
-    color: blue;
+    color: #9e9bfc;
 }
 
 .upvote:hover, .downvote:hover {
@@ -315,20 +344,20 @@ main .post-content {
     gap: 3px;
 }
 
-main .post-content .post-source {
-        color: #909090;
-        font-size: 9px;
-        margin-left: 5px;
-        font-weight: lighter;
-    }
+main .post-source {
+    color: #909090;
+    font-size: 9px;
+    margin-left: 5px;
+    font-weight: lighter;
+}
 
-main .post h2 {
+main h2 {
     font-size: 14px;
     margin: 0;
     font-weight: normal;
 }
 
-main .post h2 a {
+main h2 a {
     text-decoration: none;
     color: #322ff9;
 }
@@ -346,12 +375,6 @@ main .post-comments {
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-main .post-source {
-    font-size: 6px;
-    color: grey;
-    font-weight: lighter;
 }
 
 main .post-comments button {
@@ -402,50 +425,307 @@ main .change-button img {
 
 /* POST PROPER IN MAIN */
 main .post-proper {
-    background: white;
-    padding: 10px;
+    background: #f5f5f5;
+    /* padding: 10px; */
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.post-container-i {
+    border-bottom: 1px solid #000;
+    padding: 0px 20px;
+    padding-top: 15px ;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
-@media(max-width: 800px) {
+.post-container-i h2 a {
+    font-weight: bold;
+}
+
+
+.post-container-i .post-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 8px;
+    color: #444;
+}
+
+.post-container-i .vote-container {
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: gray;
+    display: flex;
+    background-color: #ffffff;
+    padding: 10px;
+    gap: 4px;
+}
+
+
+.post-container-i .total-votes {
+    align-self: center;
+}
+
+
+.post-container-i .upvotes {
+    color: red;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.post-container-i .downvotes {
+    color: blue;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.post-container-i .post-others {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.post-container-i .comment-sortby {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.post-body {
+    font-size: 14px;
+    color: #555;
+}
+
+.comment-section {
+    /* margin-top: 20px; */
+    padding: 15px;
+    background-color: #f8f9fa;
+    /* border-radius: 5px; */
+    border: 1px solid #ddd;
+    box-shadow: inset 5px 0 5px -3px rgba(0, 0, 0, 0.15), 
+                inset 0 5px 5px -3px rgba(0, 0, 0, 0.15);
+    
+}
+
+.comment-box {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 5px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    /* border: 1px solid #aaa; */
+    border-radius: 3px;
+    padding: 5px;
+    outline: none;
+    font-size: 14px;
+    min-height: 25px;
+    max-height: 100px; 
+    overflow-y: auto; 
+    resize: none; 
+}
+
+.save-button {
+    background: #eee;
+    border: 1px solid #aaa;
+    padding: 3px 8px;
+    margin-left: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    align-self: flex-end;
+}
+
+.save-button:hover {
+    background: #ddd;
+}
+
+.formatting-help {
+    font-size: 10px;
+    color: blue;
+    text-decoration: none;
+    display: block; 
+    text-align: right;
+    margin-top: 1px;
+    margin-right: 55px;
+}
+
+.formatting-help:hover {
+    text-decoration: underline;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 0px;
+    margin-left: 0px;
+    padding-bottom: 5px;
+    /* gap: 4px; */
+    border-left: 3px solid #ddd;
+}
+
+.comment p {
+    padding-bottom: 4px;
+}
+
+.comment-section .upvote, .comment-section .downvote {
+
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.upvote:hover {
+    color: #fe9f7f;
+}
+
+.downvote:hover {
+    color: #9e9bfc;
+}
+
+
+.comment-content {
+    /* flex-grow: 1; */
+    font-size: 12px;
+}
+
+.username {
+    color: #0079D3;
+}
+
+.points, .time {
+    color: #777;
+    font-size: 10px;
+}
+
+.comment-actions {
+    margin-top: 1px;
+}
+
+.comment-actions button {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    color: #909090;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 9px;
+    padding: 0;
+
+}
+
+.comment-actions button:hover {
+    text-decoration: underline;
+}
+
+.nested {
+    margin-left: 20px;
+    border-left: 3px solid #ddd;
+}
+
+.deeper {
+    margin-left: 40px;
+    border-left: 3px solid #ddd; 
+}
+
+.deepest {
+    margin-left: 60px;
+    border-left: 3px solid #ddd;
+}
+
+/* Sidebar toggle button */
+.toggle-sidebar-label {
+    display: none;
+}
+
+/* Hide the actual checkbox */
+#toggle-sidebar {
+    display: none;
+}
+
+
+@media(max-width: 1000px) {
     body {
         grid-template-columns: 1fr;
     }
 
     aside {
         position: fixed;
-        width: 60px;
-    }
-    
-    aside .text {
-        display: none;
+        left: -200px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        background: #ddd;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease-in-out;
+        z-index: 200;
+        background-color: #eff8ff;
+
+
+        
     }
 
-    aside li {
-        justify-content: end;
-    }
-
-    .toggle-btn {
-        display: none;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        padding: 10px;
-        background: #007bff;
-        color: white;
-        border: none;
+    .toggle-sidebar-label {
+        display: block;
+        position: fixed;
+        top: 67px;
+        /* left: 10px; */
         cursor: pointer;
+        background: #fbfbfb;
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+        z-index: 2;
+        border: #fbfbfb;
+        color: #000;
+        
     }
 
-    .show {
+    #toggle-sidebar:checked ~ aside {
+        left: 0;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 150;
+    }
+
+    /* Show overlay when checkbox is checked */
+    #toggle-sidebar:checked ~ .overlay {
         display: block;
     }
 
-    @media (max-width: 800px) {
-        .toggle-btn {
-            display: block;
-        }
+
+}
+
+@media (max-width:898px) {
+    .toggle-sidebar-label {
+        top: 80px;
+    }
+}
+
+@media (max-width: 860px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "article-list"
+            "article";
+    }
+}
+
+@media (max-width: 800px) {
+    .toggle-sidebar-label {
+        top: 93px;
     }
 }

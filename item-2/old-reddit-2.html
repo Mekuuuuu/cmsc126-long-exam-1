@@ -8,7 +8,7 @@
 <body>
     <header>
         <div class="header">
-            <img src="reddit-icon.webp" alt="">
+            <img src="reddit-icon.webp" alt="Logo of the website you're visiting.">
             <h1>reddit</h1>
     </header>
     <nav>
@@ -28,7 +28,10 @@
             </div>
         </div>
     </nav>
-    
+    <label for="toggle-sidebar" class="toggle-sidebar-label">☰ Menu</label>
+    <input type="checkbox" id="toggle-sidebar">
+
+    <label for="toggle-sidebar" class="overlay"></label>
     <aside>
         <ul>
             <li><a href="#"><span class="icon">🏠</span> <span class="text">FRONT PAGE</span></a></li>
@@ -38,11 +41,11 @@
             <li><a href="#"><span class="icon">🏠</span> <span class="text">ASK REDDIT</span></a></li>
             <li><a href="#"><span class="icon">🔍</span> <span class="text">FUNNY</span></a></li>
             <li><a href="#"><span class="icon">📩</span> <span class="text">WTF</span></a></li>
-            <!-- <li><a href="#"><span class="icon">⚙️</span> <span class="text">IAMA</span></a></li>
+            <li><a href="#"><span class="icon">⚙️</span> <span class="text">IAMA</span></a></li>
             <li><a href="#"><span class="icon">🏠</span> <span class="text">WORLD NEWS</span></a></li>
             <li><a href="#"><span class="icon">🔍</span> <span class="text">WEB DESIGN</span></a></li>
             <li><a href="#"><span class="icon">📩</span> <span class="text">ATHEIST</span></a></li>
-            <li><a href="#"><span class="icon">⚙️</span> <span class="text">FFFFUUUUUUUUUU</span></a></li> -->
+            <li><a href="#"><span class="icon">⚙️</span> <span class="text">FFFFUUUUUUUUUU</span></a></li>
         </ul>
         <a href="#">(MORE)</a>
         <div class="sidebar-box">
@@ -54,6 +57,11 @@
             <p>...for your LARPing community.</p>
             <p>...because nothing in life is free (except reddits!)</p>
             <p>here on the side</p>
+        </div>
+
+        <div class="sidebar-ad">
+            <img class="sidebar-image" src="responsive-website.jpeg" alt="Supposedly an ad but it is just a meme about how great things would be if every website was responsive.">
+            <p>tiniest ad in the world</p>
         </div>
     </aside>
     <main>
@@ -71,11 +79,11 @@
                                 <label for="downvote1" class="downvote">🡇</label>
                             </div>
                             <div class="post-thumbnail">
-                                <img src="yellow-temp.png" alt="temp">
+                                <img src="sussy_baka.PNG" alt="It's a sUSSY BAKA!!">
                             </div>
                             <div class="post-content">
                                 <h2><a href="#">What do you call 60 guys watching the Super Bowl at home?</a><span class="post-source">(cnn.com)</span></h2>
-                                <p class="post-meta">submitted 19 hours ago by <a href="#">krispykrackers</a></p>
+                                <p class="post-meta">submitted <time datetime="2025-03-16T22:00:00+08:00">19 hours ago</time> by <a href="#">krispykrackers</a></p>
                                 <div class="post-comments">
                                     <button>623 comments</button>
                                     <button>share</button>
@@ -94,13 +102,13 @@
                             <div class="post-votes">
                                 <input type="checkbox" id="upvote2" class="vote-up">
                                 <label for="upvote2" class="upvote">🡅</label>
-                                <span class="score">200</span>
+                                <span class="score">-232</span>
                                 <input type="checkbox" id="downvote2" class="vote-down">
                                 <label for="downvote2" class="downvote">🡇</label>
                             </div>
                             <div class="post-content">
-                                <h2><a href="#">IAM guy who created this design AMA</a><span class="post-source">(i.imgur.com)</span></h2>
-                                <p class="post-meta">submitted 19 hours ago by <a href="#">7hundredand77</a></p>
+                                <h2><a href="#">IAM the guy who created this design AMA</a><span class="post-source">(i.imgur.com)</span></h2>
+                                <p class="post-meta"><time datetime="2025-03-16T22:00:00+08:00">19 hours ago</time> by <a href="#">mekuu6969</a></p>
                                 <div class="post-comments">
                                     <button>200 comments</button>
                                     <button>share</button>
@@ -125,7 +133,7 @@
                             </div>
                             <div class="post-content">
                                 <h2><a href="#">Use this Chrome addon to 'block major third parties and search engines from tracking the webpages you go to and searches...'</a><span class="post-source">(i.imgur.com)</span></h2>
-                                <p class="post-meta">submitted 11 hours ago by <a href="#">krispykrackers</a></p>
+                                <p class="post-meta">submitted <time datetime="2025-03-16T22:00:00+08:00">11 hours ago</time> by <a href="#">krispykrackers</a></p>
                                 <div class="post-comments">
                                     <button>200 comments</button>
                                     <button>share</button>
@@ -137,7 +145,7 @@
                         </div>
                     </article>
                 </li>
-                  <li>
+                <li>
                     <article class="post">
                         <div class="post-rank">4</div>
                         <div class="post-container">
@@ -148,11 +156,94 @@
                                 <input type="checkbox" id="downvote4" class="vote-down">
                                 <label for="downvote4" class="downvote">🡇</label>
                             </div>
+                            <div class="post-thumbnail">
+                                <img src="monggo-reddit.jpg" alt="Cooked monggos">
+                            </div>
                             <div class="post-content">
                                 <h2><a href="#">Pano gawin malapot ung munggo?</a><span class="post-source">(i.imgur.com)</span></h2>
-                                <p class="post-meta">submitted 22 hours ago by <a href="#">Pinkish_glow</a></p>
+                                <p class="post-meta">submitted <time datetime="2025-03-16T22:00:00+08:00">22 hours ago</time> by <a href="#">Pinkish_glow</a></p>
                                 <div class="post-comments">
                                     <button>32 comments</button>
+                                    <button>share</button>
+                                    <button>save</button>
+                                    <button>hide</button>
+                                    <button>report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="post">
+                        <div class="post-rank">5</div>
+                        <div class="post-container">
+                            <div class="post-votes">
+                                <input type="checkbox" id="upvote5" class="vote-up">
+                                <label for="upvote5" class="upvote">🡅</label>
+                                <span class="score">145</span>
+                                <input type="checkbox" id="downvote5" class="vote-down">
+                                <label for="downvote5" class="downvote">🡇</label>
+                            </div>
+                            <div class="post-content">
+                                <h2><a href="#">I received rocks instead of my order ‼️‼️</a><span class="post-source">(shopee.com)</span></h2>
+                                <p class="post-meta">submitted <time datetime="2025-03-16T22:00:00+08:00">3 days ago</time> by <a href="#">SoohyunBanana</a></p>
+                                <div class="post-comments">
+                                    <button>178 comments</button>
+                                    <button>share</button>
+                                    <button>save</button>
+                                    <button>hide</button>
+                                    <button>report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="post">
+                        <div class="post-rank">6</div>
+                        <div class="post-container">
+                            <div class="post-votes">
+                                <input type="checkbox" id="upvote6" class="vote-up">
+                                <label for="upvote6" class="upvote">🡅</label>
+                                <span class="score">101</span>
+                                <input type="checkbox" id="downvote6" class="vote-down">
+                                <label for="downvote6" class="downvote">🡇</label>
+                            </div>
+                            <div class="post-content">
+                                <h2><a href="#">i went live on tiktok and my boyfriend broke up with me</a><span class="post-source">(r/adviceph)</span></h2>
+                                <p class="post-meta">submitted <time datetime="2025-03-16T22:00:00+08:00">15 hours ago</time> by <a href="#">0513dit</a></p>
+                                <div class="post-comments">
+                                    <button>31 comments</button>
+                                    <button>share</button>
+                                    <button>save</button>
+                                    <button>hide</button>
+                                    <button>report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="post">
+                        <div class="post-rank">7</div>
+                        <div class="post-container">
+                            <div class="post-votes">
+                                <input type="checkbox" id="upvote7" class="vote-up">
+                                <label for="upvote7" class="upvote">🡅</label>
+                                <span class="score">79</span>
+                                <input type="checkbox" id="downvote7" class="vote-down">
+                                <label for="downvote7" class="downvote">🡇</label>
+                            </div>
+                            <div class="post-thumbnail">
+                                <img src="spicy_car.jpg" alt="Spicy car">
+                            </div>
+                            <div class="post-content">
+                                <h2><a href="#">why is my car spicy??</a><span class="post-source">(r/cat)</span></h2>
+                                <p class="post-meta">submitted <time datetime="2025-03-16T22:00:00+08:00">3 hours ago</time> by <a href="#">spycycat_haver</a></p>
+                                <div class="post-comments">
+                                    <button>299 comments</button>
                                     <button>share</button>
                                     <button>save</button>
                                     <button>hide</button>
@@ -173,10 +264,241 @@
             </div>
         </section>
         <section class="post-proper">
-            <h1>Hello World</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tincidunt nisi, ornare tincidunt mauris vestibulum at. Suspendisse a porta velit. Maecenas sed velit consequat, finibus risus suscipit, feugiat metus. Maecenas libero quam, aliquet a finibus vitae, molestie ac nulla. Nam porta elit enim, ultrices consequat nibh efficitur et. Phasellus augue sapien, lobortis in ligula eu, mollis tempus dui. Nulla eleifend tincidunt odio, sed eleifend massa accumsan vel. Pellentesque consectetur est id sem tincidunt, nec facilisis metus rhoncus. Fusce eget quam nec elit faucibus consectetur nec vel leo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tincidunt nisi, ornare tincidunt mauris vestibulum at. Suspendisse a porta velit. Maecenas sed velit consequat, finibus risus suscipit, feugiat metus. Maecenas libero quam, aliquet a finibus vitae, molestie ac nulla. Nam porta elit enim, ultrices consequat nibh efficitur et. Phasellus augue sapien, lobortis in ligula eu, mollis tempus dui. Nulla eleifend tincidunt odio, sed eleifend massa accumsan vel. Pellentesque consectetur est id sem tincidunt, nec facilisis metus rhoncus. Fusce eget quam nec elit faucibus consectetur nec vel leo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt tincidunt nisi, ornare tincidunt mauris vestibulum at. Suspendisse a porta velit. Maecenas sed velit consequat, finibus risus suscipit, feugiat metus. Maecenas libero quam, aliquet a finibus vitae, molestie ac nulla. Nam porta elit enim, ultrices consequat nibh efficitur et. Phasellus augue sapien, lobortis in ligula eu, mollis tempus dui. Nulla eleifend tincidunt odio, sed eleifend massa accumsan vel. Pellentesque consectetur est id sem tincidunt, nec facilisis metus rhoncus. Fusce eget quam nec elit faucibus consectetur nec vel leo.</p>
+            <div class="post-container-i">
+                <div class="post-content">
+                    <h2><a href="#">IAM the guy who created this design AMA</a><span class="post-source">(i.imgur.com)</span></h2>
+                    <p class="post-meta">http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg</p>
+                </div>
+                
+                <div class="post-details">
+                    <div class="vote-container">
+                        <div class="total-votes">
+                            <p><strong><span style="font-size: 20px;">-232</span> points</strong> (39% like it)</p> 
+                        </div>
+                        <div class="votes">
+                            <p class="upvotes">427 up votes</p>
+                            <p class="downvotes">666 down votes</p>
+                        </div>
+                        
+                    </div>
+                    <div class="post-others">
+                        <div class="timestamp">submitted on 01 Feb 2011</div>
+                        <div class="comment-sortby">
+                            <div class="post-comments"><button>200 comments</button></div>
+                            <div class="post-comments"><button>sort by</button></div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="comment-section">
+                <div class="comment-box">
+                    <textarea class="comment-input" placeholder=""></textarea>
+                    <button class="save-button">save</button>
+                </div>
+                <a href="formatting-help.com" class="formatting-help">formatting help</a>
+
+                
+                <div class="comment">
+                    <div class="post-votes" style="padding-right: 5px;">
+                        <input type="checkbox" id="upvote11" class="vote-up">
+                        <label for="upvote11" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote11" class="vote-down">
+                        <label for="downvote11" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">UserNumber42</strong> <span class="points">47 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">21 hours ago</time></span></p>
+                        <p>Wow, the first Reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide screen monitors this could be very cool.</p>
+                        <p>Only suggestion is to have lower the width of the scores column for each post and the subreddit side bar so there is more room for the content.</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="comment nested">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote21" class="vote-up">
+                        <label for="upvote21" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote21" class="vote-down">
+                        <label for="downvote21" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">mekuu6969</strong> <span>[<span style="color: blue;">S</span>]</span>s <span class="points">14 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">20 hours ago</time></span></p>
+                        <p>Haha. It still needs a lot of work. Like a <strong>LOT</strong>! If you could only see the spaghetti of a code my style.css is for this single webpage. You would cry ngl..</p>
+                        <p>And if you saw my HTML... well, it’s held together by hopes, dreams, and one very suspicious semicolon.</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>edit</button>
+                            <button>delete</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="comment nested deeper">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote31" class="vote-up">
+                        <label for="upvote31" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote31" class="vote-down">
+                        <label for="downvote31" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">aliasforspam</strong> <span class="points">7 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">15 hours ago</time></span></p>
+                        <p>Only suggestion: make the upvote button bigger so I can actually hit it instead of my usual misclick on "report."</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>report</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="post-votes" style="padding-right: 5px;">
+                        <input type="checkbox" id="upvote111" class="vote-up">
+                        <label for="upvote111" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote111" class="vote-down">
+                        <label for="downvote111" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">hell0_kitty_from_hell</strong> <span class="points">32 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">21 hours ago</time></span></p>
+                        <p>Weyk and beyk.</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>report</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="comment nested">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote211" class="vote-up">
+                        <label for="upvote211" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote211" class="vote-down">
+                        <label for="downvote211" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">mekuu6969</strong> <span>[<span style="color: blue;">S</span>]</span> <span class="points">14 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">20 hours ago</time></span></p>
+                        <p>Revolutionary question. Next!</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>edit</button>
+                            <button>delete</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment nested">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote222" class="vote-up">
+                        <label for="upvote222" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote222" class="vote-down">
+                        <label for="downvote222" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">grammah nazi</strong> <span class="points">-200 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">20 hours ago</time></span></p>
+                        <p>Actually, it is spelled as 'Wake and bake, peasant!'</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>report</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment nested deeper">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote311" class="vote-up">
+                        <label for="upvote311" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote311" class="vote-down">
+                        <label for="downvote311" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">the real GRAMMER NAZI</strong> <span class="points">223 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">15 hours ago</time></span></p>
+                        <p>Oh, the irony is absolutely <em>delicious!</em> Here we have a self-proclaimed <strong>"grammah nazi"</strong> who, in a plot twist worthy of Shakespearean tragedy, <strong>butchered his own name.</strong></p>
+                        <p>Did your keyboard suffer a stroke mid-typing? Did autocorrect take a day off? Or—brace yourself—was it... intentional? A bold satire, perhaps? A postmodern commentary on the fallibility of even the most self-righteous linguistic enforcers?</p>
+                        <p>Because let’s be honest—if you’re going to wield the red pen of grammatical tyranny, you might want to <strong>proofread your own banner first.</strong> Otherwise, it’s like a doctor named "Malpractiss" or a lifeguard who can't swim.</p>
+                        <p>But hey, I respect the confidence. You saw <strong>"Grammar Nazi"</strong> and thought, <em>"Nah, let’s spice this up with some phonetic chaos!"</em> And for that, my good sir, I salute you.</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>report</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment nested deeper deepest">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote322" class="vote-up">
+                        <label for="upvote322" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote322" class="vote-down">
+                        <label for="downvote322" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">c00chie$$ m0nsteRRR</strong> <span class="points">1 point</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">1 hours ago</time></span></p>
+                        <p>no offense.. but  uhh.. UwW. can. you stfu? *blush</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>report</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <div class="post-votes" style="padding-right: 5px;">
+                        <input type="checkbox" id="upvote1133" class="vote-up">
+                        <label for="upvote1133" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote1133" class="vote-down">
+                        <label for="downvote1133" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">JuliusCaesarVEVO</strong> <span class="points">2 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">4 hours ago</time></span></p>
+                        <p>who is your father?</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>report</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment nested">
+                    <div class="post-votes">
+                        <input type="checkbox" id="upvote244" class="vote-up">
+                        <label for="upvote244" class="upvote">🡅</label>
+                        <input type="checkbox" id="downvote244" class="vote-down">
+                        <label for="downvote244" class="downvote">🡇</label>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong class="username">mekuu6969</strong> <span>[<span style="color: blue;">S</span>]</span> <span class="points">5 points</span> <span class="time"><time datetime="2025-03-16T22:00:00+08:00">21 minutes ago</time></span></p>
+                        <p>???</p>
+                        <div class="comment-actions">
+                            <button>permalink</button>
+                            <button>parent</button>
+                            <button>edit</button>
+                            <button>delete</button>
+                            <button>reply</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </section>
     </main>
 </body>
